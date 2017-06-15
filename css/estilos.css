@@ -1,0 +1,335 @@
+body {
+  font-family: 'Allerta', sans-serif;
+  margin: 0;
+}
+header {
+  background: #673838;
+  height: 50px;
+  padding:0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  height: inherit;
+}
+nav ul {
+  margin: 0;
+  height: inherit;
+}
+nav ul {
+  display: flex;
+}
+nav li {
+  list-style: none;
+  color: white;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+nav li:after{
+  content: "|";
+  display: inline-block;
+}
+nav li:last-child:after{
+  display: none;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+}
+nav a:hover {
+  box-shadow: inset 0 5px 0 red !important;
+}
+nav a.is-active {
+  box-shadow: inset 0 5px 0 #7dcd40;
+}
+p {
+	font-family: 'Montserrat', sans-serif;
+  	font-size: 16px;
+}
+.background {
+  background-image: url('../images/Fre5.jpg');
+  background-size: cover;
+}
+.contenedor {
+  width: 800px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 10px;
+  /*border: 2px solid red;*/
+}
+.logotipo {
+  display: inline-block;
+  margin-left: 0;
+  color: black;
+  border-image: 10px;
+  /*border: 1px solid red;*/
+}
+.logo {
+  width: 210px;
+  height: 250px;
+  position: absolute;
+  margin-top: 50px;
+}
+.logo1 {
+  width: 180px;
+    height: 220px;
+    margin-left: 20px;
+    margin-top: 250px;
+}
+.header-right {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.header-right .button {
+  margin-left: 10px;
+}
+.button1 {
+  border-radius: 12px;
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  background: linear-gradient(to left, #fe344e, #ff7250);
+  align-self: flex-end;
+  margin: 10px;
+}
+.button {
+  background: gray;
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .3);
+  border-bottom: 5px solid black;
+  font-size: 14px;
+  padding: 5px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: .2s;
+}
+.opacidad {
+  opacity: .7;
+  background: black;
+}
+.opacidad1 {
+  width: 800px;
+  height: 300px;
+  opacity: .7;
+  display: flex;
+  justifi-content: center;
+  flex-direction: column;
+}
+.titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  padding-left: 10px;
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+.title-a {
+  font-size: 25px;
+  margin-left: 0;
+  padding-left: 400px;
+}
+.titulo span {
+  text-decoration: underline;
+}
+.button:active {
+  transform: scale(.9);
+}
+.button.red {
+  background: #ff4842;
+}
+.button.green {
+  background: #7dcd40;
+}
+.portada {
+  color: white;
+  padding: 20px;
+  height: 600px;
+}
+.portada button {
+  margin-bottom: 70px;
+}
+
+/*inicio hover*/
+.view {
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    float: left;
+    border: 1px solid #fff;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.view .mask, .view .content {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.view img {
+    display: block;
+    position: relative;
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    color: black;
+   /* padding: 10px 20px 20px;
+    text-align: center;*/
+}
+.view img {
+    transition: all 0.1s linear;
+}
+.view .mask {
+    opacity: 0;
+    transition: all 0.1s ease-in;
+    transform: scale(0) rotate(-90deg);
+}
+.view p { 
+    transition: all 0.1s ease-in;
+    transform: scale(0) rotate(-190deg);
+    transition: all 0.1s ease-in-out 0.1s;
+    opacity: 0;
+    transform: translateY(0px);
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000;
+}
+.view a.info {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+/*Reglas que se activas al hacer hover*/
+.view:hover img { 
+    transform: scale(1.1);
+} 
+.view:hover .mask { 
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    transition-delay: 0.1s;
+}
+.view:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view:hover p {
+     transition-delay: 0.1s;
+     transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+.view:hover a.info {
+    transition-delay: 0.2s;
+}
+/*fin hover*/
+
+/*Aqui comienza FLEX*/
+.padre {
+  border: 1px solid;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row; /*para filas*/
+}
+.hijo {
+  width: 200px;
+  height: 250px;
+  margin: 43px;
+  background: white;
+  border: 1px;
+  justify-content: center; /*alineado vertical*/
+  flex-direction: column;
+  color: black;
+}
+/*Aqui termina FLEX*/
+
+/* Pagination */
+.pagination {
+  font-size: 85%;
+  line-height: 1.52;
+  margin: 10px auto 0 auto;
+}
+.pagination .pagination-prev {
+  padding-right: 20px;
+}
+.pagination .pagination-next {
+  padding-left: 15px;
+}
+
+/*Aqui comienza el flex del pie de pagina footer*/
+.footer {
+  background: #673838;
+  padding: 50px 10px;
+}
+.contacto {
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.contacto img {
+  display: block;
+}
+.contacto strong {
+  display: block;
+}
+.contacto a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0px 0px 0;
+}
+.footer .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+.formulario {
+  display: flex;
+  width: 400px;
+  color: white;
+}
+.col1, .col2 {
+  display: flex;
+  flex-direction: column;
+}
+.col1 {
+  margin-right: 15px;
+}
+.col2 {
+  align-items: flex-start;
+}
+.col2 .button {
+  margin-top: 15px;
+}
+.intereses label {
+  font-size: 12px;
+}
+.formulario label, .sexo, .intereses {
+  margin-bottom: 10px;
+}
+.sexo {
+  margin-top: 10px;
+}
+/*Aqui termina el footer*/
